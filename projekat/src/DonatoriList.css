@@ -1,0 +1,33 @@
+#donoriTabela {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width:100%;
+  }
+  
+  #donoriTabela td,
+  #donoriTabela th {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  td {
+    text-align: center;
+  }
+  
+  
+  #donoriTabela tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  #donoriTabela tr:hover {
+    background-color: #ddd;
+  }
+  
+  #donoriTabela th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color:   #f33535;
+    color: white;
+  }
+
