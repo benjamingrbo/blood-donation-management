@@ -3,7 +3,7 @@ import React from 'react'
 const SearchJmbg = ({searchJmbg, setSearchJmbg}) => {
   return (
     <div className='formaDiv'>
-            <label>Unesite JMBG</label>
+            <label>JMBG</label>
             <form className="searchForm" onSubmit={(e) => e.preventDefault()}>
                 <input
                     id='search'

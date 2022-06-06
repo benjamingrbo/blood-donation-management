@@ -3,9 +3,10 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 10vh;
-    background-color: #63666A;
-    color:white;
+    background-color: whitesmoke;
+    color:rgb(220,53,69);
 }
+
 
 .header {
     display: flex;
@@ -21,6 +22,8 @@ nav{
   .header h3 {
     margin-left: 3%;
     width: 100%;
+    color:rgb(220,53,69);
+    border: none;
   }
   
 
@@ -35,16 +38,24 @@ nav{
 
 a:visited{
     text-decoration: none;
+    color:rgb(220,53,69);
+}
+
+.nav-links a{
+    text-decoration: none;
+    color:rgb(220,53,69);
+    font-size: 20px;
+    border: 1px solid rgb(220,53,69);
+    padding: 2.5%;
+    border-radius: 15px;
+}
+
+.nav-links a:hover{
+    background-color:rgb(220,53,69);
     color:white;
+    
 }
 
 a{
-    text-decoration: none;
-    color:white;
-}
-
-li:hover{
-    background-color: white;
-    color:black;
-    
+  text-decoration: none;
 }

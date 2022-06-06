@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './NoviDonator.css'
+import { useNavigate } from 'react-router-dom';
 
 const NoviDonator = () => {
+  const navigate = useNavigate();
 
   const [opcine, setOpcine] = useState([]);
   const [krvneGrupe, setKrvneGrupe] = useState([]);
@@ -81,9 +83,12 @@ const NoviDonator = () => {
         body: JSON.stringify(noviDonatorZaUpis)
       }).then(() => {
         console.log('Nova osoba dodana');
+        alert("Novi donor uspješno dodat !")
       })
     } catch (error) {
       console.log(error);
+    }finally{
+      navigate('/');
     }
 
   }
@@ -95,42 +100,42 @@ const NoviDonator = () => {
         <label >JMBG</label>
         <input required
           type="text"
-          placeholder="Your name.."
+          placeholder="Unesite JMBG"
           onChange={(e) => { noviDonatorZaUpis.jmbg = e.target.value }} />
 
         <label>Ime</label>
         <input
           required
           type="text"
-          placeholder="Your last name.."
+          placeholder="Unesite ime"
           onChange={(e) => { noviDonatorZaUpis.ime = e.target.value }} />
 
         <label>Prezime</label>
         <input
           required
           type="text"
-          placeholder="Your last name.."
+          placeholder="Unesite prezime"
           onChange={(e) => { noviDonatorZaUpis.prezime = e.target.value }} />
 
         <label>Broj zdravstvene knjižice</label>
         <input
           required
           type="text"
-          placeholder="Your last name.."
+          placeholder="Unesite broj zdravstvene knjižice"
           onChange={(e) => { noviDonatorZaUpis.brojKnjizice = e.target.value }} />
 
         <label>Adresa</label>
         <input
           required
           type="text"
-          placeholder="Your last name.."
+          placeholder="Unesite adresu stanovanja"
           onChange={(e) => { noviDonatorZaUpis.adresa = e.target.value }} />
 
         <label>Općina</label>
         <select id="opcina"
           required
           onChange={(e) => { noviDonatorZaUpis.opcinaId = e.target.value }}>
-          <option>Izaberite općinu stanovanja</option>
+          <option disabled selected hidden>Izaberite općinu stanovanja</option>
           {opcine.map((opcina) => (
             <option value={opcina.opcinaId}>{opcina.nazivOpcine}</option>
           ))}
@@ -140,7 +145,7 @@ const NoviDonator = () => {
         <select id="krvnaGrupa"
           required
           onChange={(e) => { noviDonatorZaUpis.krvnaGrupaId = e.target.value }}>
-          <option>Izaberite krvnu grupu</option>
+          <option disabled selected hidden>Izaberite krvnu grupu</option>
           {krvneGrupe.map((krvnaGrupa) => (
             <option value={krvnaGrupa.krvnaGrupaId}>{krvnaGrupa.krvnaGrupa1}</option>
           ))}
@@ -150,7 +155,7 @@ const NoviDonator = () => {
         <select id="faktor"
           required
           onChange={(e) => { noviDonatorZaUpis.faktorId = e.target.value }}>
-          <option>Izaberite RH faktor</option>
+          <option disabled selected hidden>Izaberite RH faktor</option>
           {faktori.map((faktor) => (
             <option value={faktor.faktorId}>{faktor.faktor}</option>
           ))}
@@ -166,13 +171,13 @@ const NoviDonator = () => {
         <label>Email</label>
         <input
           type="text"
-          placeholder="U formatu bez / i -"
+          placeholder="Unesite email adresu"
           onChange={(e) => { noviDonatorZaUpis.email = e.target.value }} />
 
         <label>Napomena</label>
         <input
           type="text"
-          placeholder="U formatu bez / i -"
+          placeholder="Unesite napomenu ukoliko postoji"
           onChange={(e) => { noviDonatorZaUpis.napomena = e.target.value }} />
 
 

@@ -9,7 +9,7 @@ import SearchOpcine from './SearchOpcine'
 
 const Pocetna = ({ donatori, searchKrvneGrupe, setSearchKrvneGrupe, searchRHfaktora, setSearchRHfaktora, setDonatorZaEdit, handleDelete, searchJmbg, setSearchJmbg, searchOpcine, setSearchOpcine}) => {
   return (
-    <div> 
+    <div id='pocetnaContent'> 
       <SearchJmbg searchJmbg={searchJmbg} setSearchJmbg={setSearchJmbg}/>
       <SearchKrvneGrupe searchKrvneGrupe={searchKrvneGrupe}
       setSearchKrvneGrupe={setSearchKrvneGrupe}/>

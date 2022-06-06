@@ -23,7 +23,7 @@ const SearchOpcine = ({setSearchOpcine}) => {
 
     return (
         <div className='formaDiv'>
-            <label>Izaberite općinu</label>
+            <label>Općina</label>
             <form action="#" className="searchForm">
                 <select id="opcina"
                     onChange={(e) => {setSearchOpcine(e.target.value)}}>

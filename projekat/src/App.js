@@ -80,7 +80,7 @@ function App() {
         <Route path="/historijaDonacija/:jmbg" element={<HistorijaDonacija />}></Route>
         <Route path="/historijaBolesti/:jmbg" element={<HistorijaBolesti />}></Route>
         <Route path="/novaDonacija/:jmbg" element={<NovaDonacija />}></Route>
-        <Route path="/urediDonora/:jmbg" element={<UrediDonora donatorZaEdit={donatorZaEdit} />}></Route>
+        <Route path="/urediDonora/:jmbg" element={<UrediDonora donatorZaEdit={donatorZaEdit}/>}></Route>
         <Route path="/novaDijagnoza/:jmbg" element={<NovaDijagnoza/>}></Route>
       </Routes>
 

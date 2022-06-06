@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const NovaDonacija = () => {
     let  {jmbg}  = useParams();
+    const navigate = useNavigate();
     
     
     const [ustanove, setUstanove] = useState([]);
@@ -51,6 +53,8 @@ const NovaDonacija = () => {
             })
           } catch (error) {
             console.log(error);
+          }finally{
+            navigate('/');
           }
 
     }
@@ -70,7 +74,7 @@ const NovaDonacija = () => {
                 <select id="ustanova"
                     required
                     onChange={(e) => { novaDonacija.ustanovaId = e.target.value }}>
-                    <option>Izaberite ustanovu doniranja</option>
+                    <option disabled selected hidden>Izaberite ustanovu doniranja</option>
                     {ustanove.map((ustanova) => (
                         <option value={ustanova.ustanovaId}>{ustanova.nazivUstanove}</option>
                     ))}
@@ -84,7 +88,7 @@ const NovaDonacija = () => {
                 <label >Opis</label>
                 <input
                     type="text"
-                    placeholder="Your name.." 
+                    placeholder="npr. Akcija održana u prostorijama Fakulteta za saobraćaj i komunikacije" 
                     onChange={(e) => { novaDonacija.opis = e.target.value }}
                     />
 

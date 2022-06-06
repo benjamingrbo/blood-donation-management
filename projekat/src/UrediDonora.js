@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 
-const UrediDonora = ({ donatorZaEdit }) => {
+const UrediDonora = ({donatorZaEdit}) => {
+    const navigate = useNavigate();
 
     const [opcine, setOpcine] = useState([]);
     const [krvneGrupe, setKrvneGrupe] = useState([]);
@@ -112,12 +114,13 @@ const UrediDonora = ({ donatorZaEdit }) => {
             }).then(() => {
               console.log('Donor ažuriran');
             })
-            window.location.reload(false);//za rr nakon submita
           } catch (error) {
             console.log(error);
+          }finally{
+              alert("Donor uspješno ažuriran !");
+              navigate('/');
           }
     }
-
 
     return (
 
@@ -206,7 +209,7 @@ const UrediDonora = ({ donatorZaEdit }) => {
                 <label >Napomena</label>
                 <input required
                     type="text"
-                    placeholder="Your name.."
+                    placeholder="Unesite napomenu ukoliko postoji"
                     defaultValue={donatorZaEdit.napomena}
                     ref={napomenaRef} />
 

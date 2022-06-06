@@ -5,7 +5,7 @@ import './SearchKrvneGrupe.css'
 const SearchRHFaktora = ({ searchRHfaktora, setSearchRHfaktora }) => {
     return (
         <div className='formaDiv'>
-            <label>Unesite RH faktor</label>
+            <label>RH faktor</label>
             <form className="searchForm" onSubmit={(e) => e.preventDefault()}>
                 <input
                     id='search'

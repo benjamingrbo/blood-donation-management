@@ -4,36 +4,50 @@
     justify-content: flex-start;
     margin: 0.2rem 0 0;
     padding: 0 0.5rem 0.25rem;
-    border-bottom: 1px solid #eee;
   }
 
 .formaDiv{
       display: inline-block;
       margin-left: 2.5%;
+      width: 20%;
 }
-  
-  .searchForm label {
-    position: absolute;
-    left: -99999px;
-  }
-  
+
   .searchForm input[type='text'] {
     flex-grow: 1;
     max-width: 100%;
     min-height: 20px;
     font-size: 1rem;
     padding: 0.25rem;
-    border-radius: 0.25rem;
-    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left:2%;
   }
 
   .searchForm select {
+    display: inline-block;
     flex-grow: 1;
     width: 100%;
     min-height: 20px;
     font-size: 1rem;
     padding: 0.25rem;
-    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left:2%;
+  }
+
+  .searchForm input:focus{
     outline: none;
+    border: 1px solid rgb(220,53,69);
+  }
+
+  .searchForm select:focus{
+    outline: none;
+    border: 1px solid rgb(220,53,69);
+  }
+
+  .formaDiv label{
+    color:rgb(220,53,69);
   }
 

@@ -4,7 +4,7 @@ import './SearchKrvneGrupe.css'
 const SearchKrvneGrupe = ({ searchKrvneGrupe, setSearchKrvneGrupe }) => {
     return (
         <div className='formaDiv'>
-            <label>Unesite krvnu grupu</label>
+            <label>Krvna grupa</label>
             <form className="searchForm" onSubmit={(e) => e.preventDefault()}>
                 <input
                     id='search'
